@@ -121,16 +121,15 @@
         }
 
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-            position: relative;
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 2rem;
-            padding-bottom: 100px;
-            padding-top: calc(2rem + var(--nav-height));
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 85vh; /* was 100vh */
+          text-align: center;
+          padding-bottom: 5vh; /* Add some spacing from bottom */
         }
+
 
         .sidebar {
             position: sticky;
@@ -321,11 +320,16 @@
             border-radius: 0.8rem;
             padding: 1rem;
         }
+        
+  .marquee {
+      display: inline-block; /* prevent full-width vertical stacking */
+      white-space: nowrap;
+      overflow: hidden;
+      height: 50px; /* or whatever fits your content nicely */
+      animation: marquee 5s linear infinite;
+      line-height: 50px; /* vertically center text */
+    }
 
-        marquee {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
 
         .discord-status {
             width: 100%;
@@ -835,18 +839,6 @@
             <div class="card">
                 <h2>Discord Presence</h2>
 <a href="https://discord.com/users/1230574679799103583"><img src="https://lanyard.cnrad.dev/api/1230574679799103583?theme=dark&showDisplayName=true" /></a>
-
-            <div class="card spotify-card">
-                <iframe style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/track/22zw6m2O6LoD3mVEcCUwiF?utm_source=generator" 
-                        width="100%" 
-                        height="152" 
-                        frameBorder="0" 
-                        allowfullscreen="" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy">
-                </iframe>
-            </div>
 
             <div class="card">
                 <h2>Text Reverser</h2>
