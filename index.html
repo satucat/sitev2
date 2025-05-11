@@ -275,11 +275,16 @@
             border-radius: 8px;
         }
 
+        .card-container {
+            text-align: center; /* Center the cards horizontally */
+        }
+
         .card {
+            display: inline-block;
             background: var(--card);
             border-radius: 1.5rem;
             padding: 2.5rem;
-            margin: 2rem auto;
+            margin: 1rem; /* space between cards */
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.4s ease;
             position: relative;
@@ -287,7 +292,8 @@
             height: auto;
             min-height: unset;
             max-width: 600px;
-            align-self: flex-start;
+            width: 30%; /* adjust width as needed */
+            box-sizing: border-box; /* prevents padding from affecting width */
         }
 
         .card::before {
